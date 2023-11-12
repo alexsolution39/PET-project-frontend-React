@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/header/Header.js";
 import PageTitle from "./components/PageTitle.js";
 import MySlider from "./components/slider/Slider.js";
+import Bestsellers from "./components/bestsellers/Bestsellers.js";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <main>
         <PageTitle title="CRAFT BREWERY" />
         <MySlider />
+        <Bestsellers />
       </main>
     </div>
   );

@@ -91,9 +91,10 @@ swiper-slide img {
   flex-direction: column;
   text-transform: uppercase;
 }
-.swiper-slide-item-img {
+.swiper-slide-item img {
   border-radius: 8px;
-  border: 1px solid #000;
+  outline:1px solid #000;
+  outline-offset:-1px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
