@@ -1,6 +1,7 @@
 import { useRef } from "react";
-import { BESTSELLERS_LIST } from "../constants";
-
+import { BESTSELLERS_LIST } from "../constants.js";
+import NormalWhiteButton from "../buttons/NormalWhiteButton.js";
+import { BsArrowUpRight } from "react-icons/bs";
 const Bestsellers = () => {
   const swiperElRef = useRef(null);
   const bestsellers = BESTSELLERS_LIST;
@@ -9,6 +10,7 @@ const Bestsellers = () => {
     <section className="bestsellers">
       <div className="section-title">
         <h2>BESTSELLERS</h2>
+        {NormalWhiteButton("SEE ALL", <BsArrowUpRight />)}
       </div>
       <div className="bestsellers-products">
         <div className="swiper swiper-bestsellers">
