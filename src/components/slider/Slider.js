@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { register } from "swiper/element/bundle";
-import Image from "../../pics/slider.png";
 import "./Slider.css";
 
 register();
@@ -20,13 +19,13 @@ const MySlider = () => {
             loop="true"
           >
             <swiper-slide>
-              <img src={Image} alt="" />
+              <img src="../pics/slider.png" alt="" />
             </swiper-slide>
             <swiper-slide>
-              <img src={Image} alt="" />
+              <img src="../pics/slider.png" alt="" />
             </swiper-slide>
             <swiper-slide>
-              <img src={Image} alt="" />
+              <img src="../pics/slider.png" alt="" />
             </swiper-slide>
           </swiper-container>
         </div>

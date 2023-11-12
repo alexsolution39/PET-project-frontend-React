@@ -1,5 +1,4 @@
 import HeaderMenu from "./HeaderMenu";
-import Logo from "../../pics/logo.png";
 import "./Header.css";
 
 function Header() {
@@ -8,7 +7,7 @@ function Header() {
       <section className="menu">
         <div className="logo">
           <a href="/">
-            <img src={Logo} alt="" />
+            <img src="../pics/logo.png" alt="" />
           </a>
         </div>
         <div className="menu-list">

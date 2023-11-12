@@ -12,7 +12,7 @@ export const BESTSELLERS_LIST = [
     name: "Super nova",
     price: "230 RSD",
     description: "IPA / abv 5.0% / ibu 26 / 0.33l",
-    img: '/pics/SuperNova.png',
+    img: '../pics/SuperNova.png',
   },
   {
     name: "Lutka",
