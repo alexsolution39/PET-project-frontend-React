@@ -1,10 +1,10 @@
 import { useRef } from "react";
 import { register } from "swiper/element/bundle";
-import "./Slider.css";
+import "./SliderMainPage.css";
 
 register();
 
-const MySlider = () => {
+const SliderMainPage = () => {
   const swiperElRef = useRef(null);
   return (
     <section className="slider">
@@ -34,4 +34,4 @@ const MySlider = () => {
   );
 };
 
-export default MySlider;
+export default SliderMainPage;
