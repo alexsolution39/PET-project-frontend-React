@@ -1,6 +1,6 @@
 function NormalWhiteButton(text, icon) {
   return (
-    <button class="normal-button white-button">
+    <button className="normal-button white-button">
       {text}
       {icon}
     </button>
