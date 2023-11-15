@@ -3,6 +3,9 @@ body {
   font-family: "Inter", sans-serif;
   margin: 0px;
 }
+header {
+  padding: 25px;
+}
 main {
   padding-left: 25px;
   padding-bottom: 25px;
@@ -95,16 +98,6 @@ swiper-slide img {
 .swiper-slide-item p {
   font-weight: 300;
 }
-.tab-content > .tab-pane {
-  display: none;
-}
-.tab-content > .active {
-  border: none;
-  display: block;
-}
-header {
-  padding: 25px;
-}
 .section-title {
   display: flex;
   justify-content: space-between;
@@ -116,14 +109,25 @@ header {
   gap: 12px;
 }
 .nav-link {
+  background-color: #fff;
   border: 1px solid #999999;
   color: #999999;
+  text-decoration: none;
+  color: inherit;
 }
 .nav-link.active {
   border: 1px solid #000000;
   color: #000;
 }
-.nav-link.active:hover {
+.nav-link:hover{
+  background-color: #000;
   border: 1px solid #000000;
   color: #fff;
+}
+.tab-content > .tab-pane {
+  display: none;
+}
+.tab-content > .active {
+  border: none;
+  display: block;
 }

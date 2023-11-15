@@ -27,14 +27,14 @@ const KabinetProducts = () => {
           <Nav className="section-title">
             <h2>KABINET PRODUCTS</h2>
             <Nav.Item className="tab-buttons">
-              <Nav.Link className="normal-button white-button" eventKey="BEERS">
+              <Nav.Link className="normal-button tab-button" eventKey="BEERS">
                 BEERS
               </Nav.Link>
-              <Nav.Link className="normal-button white-button" eventKey="MERCH">
+              <Nav.Link className="normal-button tab-button" eventKey="MERCH">
                 MERCH
               </Nav.Link>
               <Nav.Link
-                className="normal-button white-button"
+                className="normal-button tab-button"
                 eventKey="PIVOLADA"
               >
                 PIVOLADA
