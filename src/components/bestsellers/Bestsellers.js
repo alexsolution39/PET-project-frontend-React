@@ -21,15 +21,7 @@ const Bestsellers = () => {
         <h2>BESTSELLERS</h2>
         {NormalWhiteButton("SEE ALL", <BsArrowUpRight />)}
       </div>
-      <div className="bestsellers-products">
-        <div className="swiper swiper-bestsellers">
-          <div className="swiper-wrapper">
-            {ProductsSlider(bestsellers, sliderParams)}
-          </div>
-          <div className="swiper-button-prev"></div>
-          <div className="swiper-button-next"></div>
-        </div>
-      </div>
+      {ProductsSlider(bestsellers, sliderParams)}
     </section>
   );
 };
