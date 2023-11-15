@@ -1,10 +1,10 @@
+import { TabContainer, Tab, Nav, Row } from "react-bootstrap";
 import {
   KABINET_PRODUCTS_BEERS_LIST,
   KABINET_PRODUCTS_MERCH_LIST,
   KABINET_PRODUCTS_PIVOLADA_LIST,
 } from "../constants.js";
 import ProductsSlider from "../slider/ProductsSlider.js";
-import "./KabinetProducts.css";
 
 const sliderParams = {
   slidesPerView: "4",
@@ -22,44 +22,40 @@ const KabinetProducts = () => {
 
   return (
     <section className="kabinet-products">
-      <div className="section-title">
-        <h2>KABINET PRODUCTS</h2>
-        <div className="tab-buttons">
-          <button className="normal-button white-button beers-tab active">
-            BEERS
-          </button>
-          <button className="normal-button white-button merch-tab disabled">
-            MERCH
-          </button>
-          <button className="normal-button white-button pivolada-tab disabled">
-            PIVOLADA
-          </button>
-        </div>
-      </div>
-
-      <div className="swiper swiper-kabinet-products-beers visible">
-        <div className="swiper-wrapper">
-          {ProductsSlider(beersList, sliderParams)}
-        </div>
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next"></div>
-      </div>
-
-      <div className="swiper swiper-kabinet-products-merch hidden">
-        <div className="swiper-wrapper">
-          {ProductsSlider(merchList, sliderParams)}
-        </div>
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next"></div>
-      </div>
-
-      <div className="swiper swiper-kabinet-products-pivolada hidden">
-        <div className="swiper-wrapper">
-          {ProductsSlider(pivoladaList, sliderParams)}
-        </div>
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next"></div>
-      </div>
+      <TabContainer id="kabinet-products" defaultActiveKey="BEERS">
+        <Row>
+          <Nav className="section-title">
+            <h2>KABINET PRODUCTS</h2>
+            <Nav.Item className="tab-buttons">
+              <Nav.Link className="normal-button white-button" eventKey="BEERS">
+                BEERS
+              </Nav.Link>
+              <Nav.Link className="normal-button white-button" eventKey="MERCH">
+                MERCH
+              </Nav.Link>
+              <Nav.Link
+                className="normal-button white-button"
+                eventKey="PIVOLADA"
+              >
+                PIVOLADA
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
+        </Row>
+        <Row>
+          <Tab.Content>
+            <Tab.Pane eventKey="BEERS">
+              {ProductsSlider(beersList, sliderParams)}
+            </Tab.Pane>
+            <Tab.Pane eventKey="MERCH">
+              {ProductsSlider(merchList, sliderParams)}
+            </Tab.Pane>
+            <Tab.Pane eventKey="PIVOLADA">
+              {ProductsSlider(pivoladaList, sliderParams)}
+            </Tab.Pane>
+          </Tab.Content>
+        </Row>
+      </TabContainer>
     </section>
   );
 };

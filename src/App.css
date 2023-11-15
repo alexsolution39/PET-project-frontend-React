@@ -45,6 +45,8 @@ h4 {
 .white-button {
   background-color: #fff;
   border: 1px solid #000;
+  text-decoration: none;
+  color: inherit;
 }
 .white-button:hover {
   background-color: #000;
@@ -106,10 +108,11 @@ swiper-slide img {
 .swiper-slide-item p {
   font-weight: 300;
 }
-.hidden {
+.tab-content > .tab-pane {
   display: none;
 }
-.visible {
+.tab-content > .active {
+  border: none;
   display: block;
 }
 header {
@@ -125,11 +128,15 @@ header {
   display: flex;
   gap: 12px;
 }
-.disabled {
+.nav-link {
   border: 1px solid #999999;
   color: #999999;
 }
-.active {
+.nav-link.active {
   border: 1px solid #000000;
-  color: #000000;
+  color: #000;
+}
+.nav-link.active:hover {
+  border: 1px solid #000000;
+  color: #fff;
 }
