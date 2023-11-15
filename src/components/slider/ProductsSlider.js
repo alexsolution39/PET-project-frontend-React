@@ -32,19 +32,25 @@ const shopNow = (element) => {
 const ProductsSlider = (list, sliderParams) => {
   const swiperElRef = useRef(null);
   return (
-    <swiper-container
-      ref={swiperElRef}
-      slides-per-view={sliderParams.slidesPerView}
-      navigation={sliderParams.navigation}
-      pagination={sliderParams.pagination}
-      direction={sliderParams.direction}
-      loop={sliderParams.loop}
-      space-between={sliderParams.spaceBetween}
-    >
-      {list.map((element) => {
-        return element.price ? product(element) : shopNow(element);
-      })}
-    </swiper-container>
+    <div className="swiper">
+      <div className="swiper-wrapper">
+        <swiper-container
+          ref={swiperElRef}
+          slides-per-view={sliderParams.slidesPerView}
+          navigation={sliderParams.navigation}
+          pagination={sliderParams.pagination}
+          direction={sliderParams.direction}
+          loop={sliderParams.loop}
+          space-between={sliderParams.spaceBetween}
+        >
+          {list.map((element) => {
+            return element.price ? product(element) : shopNow(element);
+          })}
+        </swiper-container>
+      </div>
+      <div className="swiper-button-prev"></div>
+      <div className="swiper-button-next"></div>
+    </div>
   );
 };
 
