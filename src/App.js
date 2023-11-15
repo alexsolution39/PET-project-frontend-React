@@ -4,7 +4,7 @@ import PageTitle from "./components/PageTitle.js";
 import SliderMainPage from "./components/slider/SliderMainPage.js";
 import Bestsellers from "./components/bestsellers/Bestsellers.js";
 import LinkToAboutUs from "./components/link-to-about-us/LinkToAboutUs.js";
-import KabinetProducts from "./components/kabinet-products/KabinetProducts.js";
+import KabinetProducts from "./components/KabinetProducts.js";
 
 function App() {
   return (

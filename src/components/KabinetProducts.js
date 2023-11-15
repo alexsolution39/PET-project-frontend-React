@@ -3,8 +3,8 @@ import {
   KABINET_PRODUCTS_BEERS_LIST,
   KABINET_PRODUCTS_MERCH_LIST,
   KABINET_PRODUCTS_PIVOLADA_LIST,
-} from "../constants.js";
-import ProductsSlider from "../slider/ProductsSlider.js";
+} from "./constants.js";
+import ProductsSlider from "./slider/ProductsSlider.js";
 
 const sliderParams = {
   slidesPerView: "4",
