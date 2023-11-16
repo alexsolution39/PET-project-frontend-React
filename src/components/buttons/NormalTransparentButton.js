@@ -1,6 +1,6 @@
-import './NormalTransparentButton.css'
+import "./NormalTransparentButton.css";
 
-function NormalTransparentButton({text, icon}) {
+function NormalTransparentButton({ text, icon }) {
   return (
     <button className="normal-button transparent-button">
       {text}

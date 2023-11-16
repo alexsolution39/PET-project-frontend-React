@@ -16,8 +16,8 @@ function App() {
         <SliderMainPage />
         <Bestsellers />
         <LinkToAboutUs />
-        <KabinetProducts/>
-        <KabinetLounge/>
+        <KabinetProducts />
+        <KabinetLounge />
       </main>
     </div>
   );
