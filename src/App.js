@@ -6,6 +6,7 @@ import Bestsellers from "./components/bestsellers/Bestsellers.js";
 import LinkToAboutUs from "./components/link-to-about-us/LinkToAboutUs.js";
 import KabinetProducts from "./components/KabinetProducts.js";
 import KabinetLounge from "./components/kabinet-lounge/KabinetLounge.js";
+import LatestNews from "./components/LatestNews.js";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <LinkToAboutUs />
         <KabinetProducts />
         <KabinetLounge />
+        <LatestNews />
       </main>
     </div>
   );
