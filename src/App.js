@@ -5,6 +5,7 @@ import SliderMainPage from "./components/slider/SliderMainPage.js";
 import Bestsellers from "./components/bestsellers/Bestsellers.js";
 import LinkToAboutUs from "./components/link-to-about-us/LinkToAboutUs.js";
 import KabinetProducts from "./components/KabinetProducts.js";
+import KabinetLounge from "./components/kabinet-lounge/KabinetLounge.js";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Bestsellers />
         <LinkToAboutUs />
         <KabinetProducts/>
+        <KabinetLounge/>
       </main>
     </div>
   );
