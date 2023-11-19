@@ -2,6 +2,7 @@ import { BESTSELLERS_LIST } from "../constants.js";
 import NormalWhiteButton from "../buttons/NormalWhiteButton.js";
 import { BsArrowUpRight } from "react-icons/bs";
 import ProductsSlider from "../slider/ProductsSlider.js";
+import "./Bestsellers.css";
 
 const sliderParams = {
   slidesPerView: "4",

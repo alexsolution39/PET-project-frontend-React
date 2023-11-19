@@ -4,12 +4,6 @@
 .central-slide {
   width: 49% !important;
 }
-.swiper-latest-news img {
-  border-radius: 8px;
-  outline: none;
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
 .swiper-latest-news p {
   margin-bottom: 5px;
 }
