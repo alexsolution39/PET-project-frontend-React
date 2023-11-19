@@ -39,10 +39,11 @@
   display: none;
 }
 .thankyou {
+  font-size: 2vw;
   text-align: center;
   color: #fff;
   border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 21px;
+  padding-bottom: 21px;
 }
