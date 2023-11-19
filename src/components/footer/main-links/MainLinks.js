@@ -1,5 +1,5 @@
-import { FOOTER_MENU_LIST } from "../constants";
-import { SOC_NET_ICONS } from "../constants";
+import { FOOTER_MENU_LIST } from "../../constants";
+import { SOC_NET_ICONS } from "../../constants";
 import "./MainLinks.css";
 
 const MainLinks = () => {

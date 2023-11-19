@@ -7,6 +7,7 @@ import LinkToAboutUs from "./components/link-to-about-us/LinkToAboutUs.js";
 import KabinetProducts from "./components/KabinetProducts.js";
 import KabinetLounge from "./components/kabinet-lounge/KabinetLounge.js";
 import LatestNews from "./components/LatestNews.js";
+import Footer from "./components/footer/Footer.js";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <KabinetProducts />
         <KabinetLounge />
         <LatestNews />
+        <Footer/>
       </main>
     </div>
   );
