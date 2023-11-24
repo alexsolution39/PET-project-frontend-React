@@ -1,8 +1,8 @@
-import './NormalWhiteButton.css'
+import "./NormalWhiteButton.css";
 
-function NormalWhiteButton(text, icon) {
+function NormalWhiteButton({ text, icon, click }) {
   return (
-    <button className="normal-button white-button">
+    <button className="normal-button white-button" onClick={click}>
       {text}
       {icon}
     </button>
