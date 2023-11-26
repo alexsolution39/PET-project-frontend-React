@@ -199,7 +199,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     name: "Super nova",
     price: 230,
     currency: "RSD",
-    style: "Ipa",
+    style: "ipa",
     alcohol: 5.0,
     alcoholFilter: "zero-five",
     color: 26,
@@ -214,7 +214,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     name: "Lutka",
     price: 230,
     currency: "RSD",
-    style: "Ipa",
+    style: "ipa",
     alcohol: 4.7,
     alcoholFilter: "zero-five",
     color: 15,
@@ -229,7 +229,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     name: "Plavo",
     price: 230,
     currency: "RSD",
-    style: "Ipa",
+    style: "ipa",
     alcohol: 6.2,
     alcoholFilter: "five-seven",
     color: 26,
@@ -244,7 +244,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     name: "Porter",
     price: 235,
     currency: "RSD",
-    style: "Ipa",
+    style: "ipa",
     alcohol: 6.0,
     alcoholFilter: "five-seven",
     color: 30,
@@ -259,7 +259,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     name: "Disko",
     price: 255,
     currency: "RSD",
-    style: "Ipa",
+    style: "ipa",
     alcohol: 5.6,
     alcoholFilter: "five-seven",
     color: 40,
@@ -289,7 +289,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     name: "Trag",
     price: 230,
     currency: "RSD",
-    style: "Ale",
+    style: "ale",
     alcohol: 4.7,
     alcoholFilter: "zero-five",
     color: 15,
@@ -319,7 +319,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     name: "Bang",
     price: 250,
     currency: "RSD",
-    style: "Ipa",
+    style: "ipa",
     alcohol: 4.6,
     alcoholFilter: "zero-five",
     color: 40,
@@ -349,7 +349,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     name: "Hop Stew",
     price: 245,
     currency: "RSD",
-    style: "Ale",
+    style: "ale",
     alcohol: 4.9,
     alcoholFilter: "zero-five",
     color: 20,
@@ -382,6 +382,7 @@ export const SHOP_MAIN_BEER_PACKS_LIST = [
     price: 1450,
     currency: "RSD",
     description: "6x0.33l",
+    quantityFilter: "six",
     img: "../pics/Kabinet.png",
     popularity: Math.random() * 10,
     averageRating: Math.random() * 10,
@@ -392,6 +393,7 @@ export const SHOP_MAIN_BEER_PACKS_LIST = [
     price: 1050,
     currency: "RSD",
     description: "4x0.33l",
+    quantityFilter: "four",
     img: "../pics/NatureSociety.png",
     popularity: Math.random() * 10,
     averageRating: Math.random() * 10,
@@ -402,6 +404,7 @@ export const SHOP_MAIN_BEER_PACKS_LIST = [
     price: 230,
     currency: "RSD",
     description: "4x0.33l",
+    quantityFilter: "four",
     img: "../pics/HoldMeTender.png",
     popularity: Math.random() * 10,
     averageRating: Math.random() * 10,
@@ -497,12 +500,75 @@ export const SORT_BY = [
   },
 ];
 export const STYLE = [
-  "Ale",
-  "Lager",
-  "Ipa",
-  "Sour",
-  "Dark",
-  "Lable",
-  "Herb/Spice/Fruit",
-  "Hoppy",
+  {
+    id: "ale",
+    name: "Ale",
+  },
+  {
+    id: "lager",
+    name: "Lager",
+  },
+  {
+    id: "ipa",
+    name: "Ipa",
+  },
+  {
+    id: "sour",
+    name: "Sour",
+  },
+  {
+    id: "dark",
+    name: "Dark",
+  },
+  {
+    id: "lable",
+    name: "Lable",
+  },
+  {
+    id: "herb-spice-fruit",
+    name: "Herb/Spice/Fruit",
+  },
+  {
+    id: "hoppy",
+    name: "Hoppy",
+  },
+];
+
+export const ALCOHOL = [
+  {
+    id: "zero-five",
+    name: "0% - 5%",
+  },
+  {
+    id: "five-seven",
+    name: "5% - 7%",
+  },
+  {
+    id: "over-seven",
+    name: "Over 7%",
+  },
+];
+export const COLOR = [
+  {
+    id: "to-fifteen-ebc",
+    name: "To 15 EBC",
+  },
+  {
+    id: "fifteen-fourty-ebc",
+    name: "15 - 40 EBC",
+  },
+  {
+    id: "over-fourty-ebc",
+    name: "Over 40 EBC",
+  },
+];
+export const QUANTITY = [
+  {
+    id: "four",
+    name: 4,
+  },
+  {
+    id: "six",
+    name: 6,
+  },
 ];
