@@ -23,23 +23,28 @@ const sliderParams = {
 const ShopTabs = () => {
   const [filtersButtonTitle, setfiltersButtonTitle] = useState("SHOW FILTERS");
   const [filters, setFilters] = useState("none");
-  const openFilters = () => {
-    setfiltersButtonTitle((currentValue) => {
-      return currentValue === "SHOW FILTERS" ? "HIDE FILTERS" : "SHOW FILTERS";
-    });
-    setFilters((currentValue) => {
-      return currentValue === "block" ? "none" : "block";
-    });
-  };
-
   const [beers, setBeers] = useState(SHOP_MAIN_BEERS_LIST);
   const [beerPacks, setBeerPacks] = useState(SHOP_MAIN_BEER_PACKS_LIST);
   const [pivolada, setPivolada] = useState(SHOP_MAIN_PIVOLADA_LIST);
   const [merch, setMerch] = useState(SHOP_MAIN_MERCH_LIST);
+  const [hidden, setHidden] = useState("none");
 
+  const hideFilters = (selectedKey) => {
+    return selectedKey !== "ALL"
+      ? setHidden((currentValue) => {
+          return (currentValue = "flex");
+        })
+      : setHidden((currentValue) => {
+          return (currentValue = "none");
+        });
+  };
   return (
-    <section class="shop-section">
-      <TabContainer id="shop-section" defaultActiveKey="ALL">
+    <section className="shop-section">
+      <TabContainer
+        id="shop-section"
+        defaultActiveKey="ALL"
+        onSelect={hideFilters}
+      >
         <Row>
           <Nav className="section-title">
             <Nav.Item className="tab-buttons">
@@ -65,11 +70,11 @@ const ShopTabs = () => {
                 MERCH
               </Nav.Link>
             </Nav.Item>
-
-            <NormalWhiteButton
-              text={filtersButtonTitle}
-              icon={<BsArrowRight />}
-              click={openFilters}
+            <ShowFilters
+              isHidden={hidden}
+              filtersButtonTitle={filtersButtonTitle}
+              setfiltersButtonTitle={setfiltersButtonTitle}
+              setFilters={setFilters}
             />
           </Nav>
         </Row>
