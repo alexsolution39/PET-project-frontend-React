@@ -1,15 +1,21 @@
 import Header from "./components/header/Header.js";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { MENU_LIST } from "./components/constants.js";
 import Footer from "./components/footer/Footer.js";
-import Home from "./components/pages/Home.js";
 import "./App.css";
-
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Home/>
-      <Footer/>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          {MENU_LIST.map((item) => {
+            return <Route path={item.link} element={item.element} />;
+          })}
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

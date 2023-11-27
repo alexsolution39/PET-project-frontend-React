@@ -2,14 +2,17 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import Home from "./pages/Home.js";
+import Shop from "./pages/Shop.js";
 
 // ======================= Menu header =======================
 export const MENU_LIST = [
-  { name: "SHOP", link: "./pages/shop-main.shtml" },
-  { name: "ABOUT", link: "./index.shtml" },
-  { name: "ART", link: "./index.shtml" },
-  { name: "NEWS", link: "./index.shtml" },
-  { name: "CONTACT", link: "./index.shtml" },
+  { name: "HOME", link: "/", element: <Home /> },
+  { name: "SHOP", link: "/shop", element: <Shop /> },
+  { name: "ABOUT", link: "/shop", element: <Shop /> },
+  { name: "ART", link: "/shop", element: <Shop /> },
+  { name: "NEWS", link: "/shop", element: <Shop /> },
+  { name: "CONTACT", link: "/shop", element: <Shop /> },
 ];
 // ======================= Index page =======================
 export const BESTSELLERS_LIST = [
