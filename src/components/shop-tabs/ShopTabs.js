@@ -53,7 +53,7 @@ const ShopTabs = () => {
               </Nav.Link>
               <Nav.Link
                 className="normal-button tab-button"
-                eventKey="BEER PACKS"
+                eventKey="BEER-PACKS"
               >
                 BEER PACKS
               </Nav.Link>
@@ -106,7 +106,7 @@ const ShopTabs = () => {
                 ]}
               />
             </Tab.Pane>
-            <Tab.Pane eventKey="BEER PACKS">
+            <Tab.Pane eventKey="BEER-PACKS">
               <FiltersSection
                 filters={filters}
                 state={beerPacks}
