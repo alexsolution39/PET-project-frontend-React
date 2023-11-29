@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Anchor } from "react-bootstrap";
 import { MENU_LIST } from "../constants.js";
 
 class HeaderMenu extends React.Component {
@@ -12,7 +12,7 @@ class HeaderMenu extends React.Component {
             return (
               item.link !== "/" && (
                 <li>
-                  <Link to={item.link}>{item.name}</Link>
+                  <Anchor href={item.link}>{item.name}</Anchor>
                 </li>
               )
             );
