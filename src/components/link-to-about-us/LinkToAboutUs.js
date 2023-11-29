@@ -19,7 +19,7 @@ function LinkToAboutUs() {
           highest quality craft beers from the selected ingredients, thus we
           have created Kabinet Brewery.
         </p>
-        {NormalWhiteButton("ABOUT US", <BsArrowUpRight />)}
+        <NormalWhiteButton text="ABOUT US" icon={<BsArrowUpRight />} />
       </div>
     </section>
   );
