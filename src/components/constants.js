@@ -8,11 +8,15 @@ import Shop from "./pages/Shop.js";
 // ======================= Menu header =======================
 export const MENU_LIST = [
   { name: "HOME", link: "/", element: <Home /> },
-  { name: "SHOP", link: "/shop", element: <Shop /> },
-  { name: "ABOUT", link: "/shop", element: <Shop /> },
-  { name: "ART", link: "/shop", element: <Shop /> },
-  { name: "NEWS", link: "/shop", element: <Shop /> },
-  { name: "CONTACT", link: "/shop", element: <Shop /> },
+  {
+    name: "SHOP",
+    link: "/shop",
+    element: <Shop activeKey="ALL" filterButton={"none"} />,
+  },
+  { name: "ABOUT", link: "", element: <Shop /> },
+  { name: "ART", link: "", element: <Shop /> },
+  { name: "NEWS", link: "", element: <Shop /> },
+  { name: "CONTACT", link: "", element: <Shop /> },
 ];
 // ======================= Index page =======================
 export const BESTSELLERS_LIST = [
@@ -150,27 +154,51 @@ export const FOOTER_MENU_LIST = [
   {
     name: "SHOP",
     list: [
-      "ALL",
-      "BEER PACKS",
-      "BEER",
-      "PIVOLADA",
-      "MERCH",
-      "TERMS OF SERVICE",
-      "REFUND POLICY",
+      {
+        name: "ALL",
+        link: "/shop",
+        element: <Shop activeKey="ALL" filterButton={"none"} />,
+      },
+      {
+        name: "BEER PACKS",
+        link: "/shop-beer-packs",
+        element: <Shop activeKey="BEER-PACKS" filterButton={"flex"} />,
+      },
+      {
+        name: "BEER",
+        link: "/shop-beers",
+        element: <Shop activeKey="BEERS" filterButton={"flex"} />,
+      },
+      {
+        name: "PIVOLADA",
+        link: "/shop-pivolada",
+        element: <Shop activeKey="PIVOLADA" filterButton={"flex"} />,
+      },
+      {
+        name: "MERCH",
+        link: "/shop-merch",
+        element: <Shop activeKey="MERCH" filterButton={"flex"} />,
+      },
+      { name: "TERMS OF SERVICE", link: "", element: "" },
+      { name: "REFUND POLICY", link: "", element: "" },
     ],
   },
   {
     name: "ABOUT US",
-    list: ["ABOUT", "ART", "NEWS"],
+    list: [
+      { name: "ABOUT", link: "", element: "" },
+      { name: "ART", link: "", element: "" },
+      { name: "NEWS", link: "", element: "" },
+    ],
   },
   {
     name: "HELP",
     list: [
-      "CONTACT",
-      "SHIPPING",
-      "RETURNED",
-      "TERMS & CONDITIONS",
-      "PRIVACY POLICY",
+      { name: "CONTACT", link: "", element: "" },
+      { name: "SHIPPING", link: "", element: "" },
+      { name: "RETURNED", link: "", element: "" },
+      { name: "TERMS & CONDITIONS", link: "", element: "" },
+      { name: "PRIVACY POLICY", link: "", element: "" },
     ],
   },
 ];

@@ -20,16 +20,20 @@ const sliderParams = {
   spaceBetween: "30",
 };
 
-const ShopTabs = () => {
+const ShopTabs = ({ activeKey, filterButton }) => {
   const [filtersButtonTitle, setfiltersButtonTitle] = useState("SHOW FILTERS");
   const [filters, setFilters] = useState("none");
   const [beers, setBeers] = useState(SHOP_MAIN_BEERS_LIST);
   const [beerPacks, setBeerPacks] = useState(SHOP_MAIN_BEER_PACKS_LIST);
   const [pivolada, setPivolada] = useState(SHOP_MAIN_PIVOLADA_LIST);
   const [merch, setMerch] = useState(SHOP_MAIN_MERCH_LIST);
-  const [hidden, setHidden] = useState("none");
+  const [hidden, setHidden] = useState(filterButton);
+  const [activeCategory, setActiveCategory] = useState(activeKey);
 
   const hideFilters = (selectedKey) => {
+    setActiveCategory((currentValue) => {
+      return (currentValue = selectedKey);
+    });
     return selectedKey !== "ALL"
       ? setHidden((currentValue) => {
           return (currentValue = "flex");
@@ -38,35 +42,50 @@ const ShopTabs = () => {
           return (currentValue = "none");
         });
   };
+
   return (
     <section className="shop-section">
       <TabContainer
         id="shop-section"
-        defaultActiveKey="ALL"
+        activeKey={activeCategory}
         onSelect={hideFilters}
       >
         <Row>
           <Nav className="section-title">
             <Nav.Item className="tab-buttons">
-              <Nav.Link className="normal-button tab-button" eventKey="ALL">
+              <Nav.Link
+                className="normal-button tab-button"
+                eventKey="ALL"
+                href="/shop"
+              >
                 ALL
               </Nav.Link>
               <Nav.Link
                 className="normal-button tab-button"
                 eventKey="BEER-PACKS"
+                href="/shop-beer-packs"
               >
                 BEER PACKS
               </Nav.Link>
-              <Nav.Link className="normal-button tab-button" eventKey="BEERS">
+              <Nav.Link
+                className="normal-button tab-button"
+                eventKey="BEERS"
+                href="/shop-beers"
+              >
                 BEERS
               </Nav.Link>
               <Nav.Link
                 className="normal-button tab-button"
                 eventKey="PIVOLADA"
+                href="/shop-pivolada"
               >
                 PIVOLADA
               </Nav.Link>
-              <Nav.Link className="normal-button tab-button" eventKey="MERCH">
+              <Nav.Link
+                className="normal-button tab-button"
+                eventKey="MERCH"
+                href="/shop-merch"
+              >
                 MERCH
               </Nav.Link>
             </Nav.Item>

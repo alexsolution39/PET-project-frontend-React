@@ -2,11 +2,11 @@ import PageTitle from "../PageTitle.js";
 import ShopTabs from "../shop-tabs/ShopTabs.js";
 import NextCategory from "../next-shop-category/NextCategory.js";
 
-const Shop = () => {
+const Shop = ({ activeKey, filterButton }) => {
   return (
     <main>
       <PageTitle title="KABINET SHOP" />
-      <ShopTabs />
+      <ShopTabs activeKey={activeKey} filterButton={filterButton} />
       <NextCategory />
     </main>
   );
