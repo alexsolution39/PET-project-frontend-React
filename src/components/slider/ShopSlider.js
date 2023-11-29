@@ -3,8 +3,9 @@ import "./ShopSlider.css";
 
 const ShopSlider = ({ list, sliderParams, title }) => {
   const swiperElRef = useRef(null);
+  const id = title.toLowerCase().replace(/ /g, "-");
   return (
-    <div className="swiper">
+    <div className="swiper" id={id}>
       <div className="swiper-wrapper">
         <swiper-container
           ref={swiperElRef}
