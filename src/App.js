@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MENU_LIST } from "./components/constants.js";
 import { FOOTER_MENU_LIST } from "./components/constants.js";
 import Footer from "./components/footer/Footer.js";
+import NotFound from "./components/pages/NotFound.js";
 import "./App.css";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
               );
             });
           })}
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>
