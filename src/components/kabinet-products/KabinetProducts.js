@@ -46,13 +46,13 @@ const KabinetProducts = () => {
         <Row>
           <Tab.Content>
             <Tab.Pane eventKey="BEERS">
-              {ProductsSlider(beersList, sliderParams)}
+              <ProductsSlider list={beersList} sliderParams={sliderParams} />
             </Tab.Pane>
             <Tab.Pane eventKey="MERCH">
-              {ProductsSlider(merchList, sliderParams)}
+              <ProductsSlider list={merchList} sliderParams={sliderParams} />
             </Tab.Pane>
             <Tab.Pane eventKey="PIVOLADA">
-              {ProductsSlider(pivoladaList, sliderParams)}
+              <ProductsSlider list={pivoladaList} sliderParams={sliderParams} />
             </Tab.Pane>
           </Tab.Content>
         </Row>

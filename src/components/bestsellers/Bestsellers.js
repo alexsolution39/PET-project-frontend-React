@@ -22,7 +22,7 @@ const Bestsellers = () => {
         <h2>BESTSELLERS</h2>
         <NormalWhiteButton text="SEE ALL" icon={<BsArrowUpRight />} />
       </div>
-      {ProductsSlider(bestsellers, sliderParams)}
+      <ProductsSlider list={bestsellers} sliderParams={sliderParams} />
     </section>
   );
 };
