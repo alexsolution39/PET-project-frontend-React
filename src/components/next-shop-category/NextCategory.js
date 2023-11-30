@@ -1,14 +1,35 @@
 import { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
+import { FOOTER_MENU_LIST } from "../constants";
 import "./NextCategory.css";
 
 const NextCategory = () => {
+  const currentUrl = window.location.pathname
+    .slice(6)
+    .toUpperCase()
+    .replace(/-/g, " ");
+  const shopArr = FOOTER_MENU_LIST[0].list
+    .map((element) => {
+      return element.name;
+    })
+    .filter((element) => {
+      return (
+        element !== "ALL" &&
+        element !== currentUrl &&
+        element !== "TERMS OF SERVICE" &&
+        element !== "REFUND POLICY"
+      );
+    });
+  const randomIndex = Math.floor(Math.random() * shopArr.length);
+  const firstButtonTitle = shopArr[randomIndex];
   const [nextCategoryButtonTitle, setnextCategoryButtonTitle] =
-    useState("BEERS");
+    useState(firstButtonTitle);
+
   const changeCategory = (event) => {
     const allTabs = Array(
       ...document.querySelectorAll(".shop-section .tab-buttons a")
     );
+
     const inactiveCategories = allTabs.filter((element) => {
       return element.ariaSelected === "false" && element.innerText !== "ALL";
     });

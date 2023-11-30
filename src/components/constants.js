@@ -165,7 +165,7 @@ export const FOOTER_MENU_LIST = [
         element: <Shop activeKey="BEER-PACKS" filterButton={"flex"} />,
       },
       {
-        name: "BEER",
+        name: "BEERS",
         link: "/shop-beers",
         element: <Shop activeKey="BEERS" filterButton={"flex"} />,
       },
