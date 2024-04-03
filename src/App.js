@@ -1,5 +1,5 @@
 import Header from "./components/header/Header.js";
-import { Routes, Route, HashRouter } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { MENU_LIST } from "./components/constants.js";
 import { FOOTER_MENU_LIST } from "./components/constants.js";
 import Footer from "./components/footer/Footer.js";

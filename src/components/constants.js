@@ -10,7 +10,7 @@ export const MENU_LIST = [
   { name: "HOME", link: "/", element: <Home /> },
   {
     name: "SHOP",
-    link: "/shop",
+    link: "/PET-project-frontend-React/shop",
     element: <Shop activeKey="ALL" filterButton={"none"} />,
   },
   { name: "ABOUT", link: "", element: <Shop /> },
