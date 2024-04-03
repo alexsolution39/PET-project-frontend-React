@@ -29,7 +29,7 @@ const shopNow = (element) => {
   );
 };
 
-const ProductsSlider = (list, sliderParams) => {
+const ProductsSlider = ({ list, sliderParams }) => {
   const swiperElRef = useRef(null);
   return (
     <div className="swiper">

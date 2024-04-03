@@ -1,5 +1,6 @@
 import { FOOTER_MENU_LIST } from "../../constants";
 import { SOC_NET_ICONS } from "../../constants";
+import { Anchor } from "react-bootstrap";
 import "./MainLinks.css";
 
 const MainLinks = () => {
@@ -12,7 +13,11 @@ const MainLinks = () => {
               <span>{element.name}</span>
               <ul>
                 {element.list.map((subelement) => {
-                  return <li>{subelement}</li>;
+                  return (
+                    <li>
+                      <Anchor href={subelement.link}>{subelement.name}</Anchor>
+                    </li>
+                  );
                 })}
               </ul>
             </div>

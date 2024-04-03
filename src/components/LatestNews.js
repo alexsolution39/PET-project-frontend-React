@@ -9,7 +9,7 @@ const LatestNews = () => {
     <section class="latest-news">
       <div class="section-title">
         <h2>LATEST NEWS</h2>
-        {NormalWhiteButton("SEE ALL", <BsArrowUpRight />)}
+        <NormalWhiteButton text="SEE ALL" icon={<BsArrowUpRight />} />
       </div>
       <SliderLatestNews list={news} />
     </section>

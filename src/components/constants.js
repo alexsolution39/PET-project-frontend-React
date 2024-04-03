@@ -2,14 +2,21 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import Home from "./pages/Home.js";
+import Shop from "./pages/Shop.js";
 
 // ======================= Menu header =======================
 export const MENU_LIST = [
-  { name: "SHOP", link: "./pages/shop-main.shtml" },
-  { name: "ABOUT", link: "./index.shtml" },
-  { name: "ART", link: "./index.shtml" },
-  { name: "NEWS", link: "./index.shtml" },
-  { name: "CONTACT", link: "./index.shtml" },
+  { name: "HOME", link: "/", element: <Home /> },
+  {
+    name: "SHOP",
+    link: "/shop",
+    element: <Shop activeKey="ALL" filterButton={"none"} />,
+  },
+  { name: "ABOUT", link: "", element: <Shop /> },
+  { name: "ART", link: "", element: <Shop /> },
+  { name: "NEWS", link: "", element: <Shop /> },
+  { name: "CONTACT", link: "", element: <Shop /> },
 ];
 // ======================= Index page =======================
 export const BESTSELLERS_LIST = [
@@ -17,7 +24,7 @@ export const BESTSELLERS_LIST = [
     name: "Super nova",
     price: "230 RSD",
     description: "IPA / abv 5.0% / ibu 26 / 0.33l",
-    img: '../pics/SuperNova.png',
+    img: "../pics/SuperNova.png",
   },
   {
     name: "Lutka",
@@ -147,27 +154,51 @@ export const FOOTER_MENU_LIST = [
   {
     name: "SHOP",
     list: [
-      "ALL",
-      "BEER PACKS",
-      "BEER",
-      "PIVOLADA",
-      "MERCH",
-      "TERMS OF SERVICE",
-      "REFUND POLICY",
+      {
+        name: "ALL",
+        link: "/shop",
+        element: <Shop activeKey="ALL" filterButton={"none"} />,
+      },
+      {
+        name: "BEER PACKS",
+        link: "/shop-beer-packs",
+        element: <Shop activeKey="BEER-PACKS" filterButton={"flex"} />,
+      },
+      {
+        name: "BEERS",
+        link: "/shop-beers",
+        element: <Shop activeKey="BEERS" filterButton={"flex"} />,
+      },
+      {
+        name: "PIVOLADA",
+        link: "/shop-pivolada",
+        element: <Shop activeKey="PIVOLADA" filterButton={"flex"} />,
+      },
+      {
+        name: "MERCH",
+        link: "/shop-merch",
+        element: <Shop activeKey="MERCH" filterButton={"flex"} />,
+      },
+      { name: "TERMS OF SERVICE", link: "", element: "" },
+      { name: "REFUND POLICY", link: "", element: "" },
     ],
   },
   {
     name: "ABOUT US",
-    list: ["ABOUT", "ART", "NEWS"],
+    list: [
+      { name: "ABOUT", link: "", element: "" },
+      { name: "ART", link: "", element: "" },
+      { name: "NEWS", link: "", element: "" },
+    ],
   },
   {
     name: "HELP",
     list: [
-      "CONTACT",
-      "SHIPPING",
-      "RETURNED",
-      "TERMS & CONDITIONS",
-      "PRIVACY POLICY",
+      { name: "CONTACT", link: "", element: "" },
+      { name: "SHIPPING", link: "", element: "" },
+      { name: "RETURNED", link: "", element: "" },
+      { name: "TERMS & CONDITIONS", link: "", element: "" },
+      { name: "PRIVACY POLICY", link: "", element: "" },
     ],
   },
 ];
@@ -199,7 +230,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     name: "Super nova",
     price: 230,
     currency: "RSD",
-    style: "Ipa",
+    style: "ipa",
     alcohol: 5.0,
     alcoholFilter: "zero-five",
     color: 26,
@@ -214,7 +245,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     name: "Lutka",
     price: 230,
     currency: "RSD",
-    style: "Ipa",
+    style: "ipa",
     alcohol: 4.7,
     alcoholFilter: "zero-five",
     color: 15,
@@ -229,7 +260,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     name: "Plavo",
     price: 230,
     currency: "RSD",
-    style: "Ipa",
+    style: "ipa",
     alcohol: 6.2,
     alcoholFilter: "five-seven",
     color: 26,
@@ -244,7 +275,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     name: "Porter",
     price: 235,
     currency: "RSD",
-    style: "Ipa",
+    style: "ipa",
     alcohol: 6.0,
     alcoholFilter: "five-seven",
     color: 30,
@@ -259,7 +290,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     name: "Disko",
     price: 255,
     currency: "RSD",
-    style: "Ipa",
+    style: "ipa",
     alcohol: 5.6,
     alcoholFilter: "five-seven",
     color: 40,
@@ -289,7 +320,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     name: "Trag",
     price: 230,
     currency: "RSD",
-    style: "Ale",
+    style: "ale",
     alcohol: 4.7,
     alcoholFilter: "zero-five",
     color: 15,
@@ -319,7 +350,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     name: "Bang",
     price: 250,
     currency: "RSD",
-    style: "Ipa",
+    style: "ipa",
     alcohol: 4.6,
     alcoholFilter: "zero-five",
     color: 40,
@@ -349,7 +380,7 @@ export const SHOP_MAIN_BEERS_LIST = [
     name: "Hop Stew",
     price: 245,
     currency: "RSD",
-    style: "Ale",
+    style: "ale",
     alcohol: 4.9,
     alcoholFilter: "zero-five",
     color: 20,
@@ -379,78 +410,196 @@ export const SHOP_MAIN_BEERS_LIST = [
 export const SHOP_MAIN_BEER_PACKS_LIST = [
   {
     name: "Kabinet",
-    price: "1450 RSD",
+    price: 1450,
+    currency: "RSD",
     description: "6x0.33l",
+    quantityFilter: "six",
     img: "../pics/Kabinet.png",
+    popularity: Math.random() * 10,
+    averageRating: Math.random() * 10,
+    added: new Date("2019-10-03 10:42:00"),
   },
   {
     name: "Nature & society",
-    price: "1050 RSD",
+    price: 1050,
+    currency: "RSD",
     description: "4x0.33l",
+    quantityFilter: "four",
     img: "../pics/NatureSociety.png",
+    popularity: Math.random() * 10,
+    averageRating: Math.random() * 10,
+    added: new Date("2020-10-03 10:42:00"),
   },
   {
     name: "Hold me tender…",
-    price: "230 RSD",
+    price: 230,
+    currency: "RSD",
     description: "4x0.33l",
+    quantityFilter: "four",
     img: "../pics/HoldMeTender.png",
+    popularity: Math.random() * 10,
+    averageRating: Math.random() * 10,
+    added: new Date("2021-10-03 10:42:00"),
   },
 ];
 export const SHOP_MAIN_PIVOLADA_LIST = [
   {
     name: "BrrKaaa",
-    price: "350 RSD",
+    price: 350,
+    currency: "RSD",
     description: "Citrus / 0.25l",
     img: "../pics/BrrKaaa-pivolada.png",
+    popularity: Math.random() * 10,
+    averageRating: Math.random() * 10,
+    added: new Date("2019-10-03 10:42:00"),
   },
   {
     name: "Plavo",
-    price: "350 RSD",
+    price: 350,
+    currency: "RSD",
     description: "Floral / 0.25l",
     img: "../pics/Plavo-pivolada.png",
+    popularity: Math.random() * 10,
+    averageRating: Math.random() * 10,
+    added: new Date("2018-10-03 10:42:00"),
   },
   {
     name: "Porter",
-    price: "350 RSD",
+    price: 350,
+    currency: "RSD",
     description: "Chocolate / 0.25l",
     img: "../pics/Porter-pivolada.png",
+    popularity: Math.random() * 10,
+    averageRating: Math.random() * 10,
+    added: new Date("2020-10-03 10:42:00"),
   },
 ];
 export const SHOP_MAIN_MERCH_LIST = [
   {
     name: "Kabinet",
-    price: "1200 RSD",
+    price: 1200,
+    currency: "RSD",
     description: "T-shirt",
     img: "../pics/kabinet-t-short.png",
+    popularity: Math.random() * 10,
+    averageRating: Math.random() * 10,
+    added: new Date("2019-10-03 10:42:00"),
   },
   {
     name: "BrrKaaa",
-    price: "350 RSD",
+    price: 350,
+    currency: "RSD",
     description: "Tote bag",
     img: "../pics/BrrKaaa-bag.png",
+    popularity: Math.random() * 10,
+    averageRating: Math.random() * 10,
+    added: new Date("2017-10-03 10:42:00"),
   },
   {
     name: "Lutka",
-    price: "350 RSD",
+    price: 350,
+    currency: "RSD",
     description: "Tote bag",
     img: "../pics/Lutka-bag.png",
+    popularity: Math.random() * 10,
+    averageRating: Math.random() * 10,
+    added: new Date("2021-10-03 10:42:00"),
   },
 ];
 // ======================= Shop filters =======================
 export const SORT_BY = [
-  "Popularity",
-  "Average rating",
-  "Newness",
-  "Low to high price",
-  "High to low price",
+  {
+    property: "Popularity",
+    className: "popularity",
+    connectedTo: "popularity",
+  },
+  {
+    property: "Average rating",
+    className: "average-rating",
+    connectedTo: "averageRating",
+  },
+  { property: "Newness", className: "newness", connectedTo: "added" },
+  {
+    property: "Low to high price",
+    className: "low-to-high-price",
+    connectedTo: "price",
+  },
+  {
+    property: "High to low price",
+    className: "high-to-low-price",
+    connectedTo: "price",
+  },
 ];
 export const STYLE = [
-  "Ale",
-  "Lager",
-  "Ipa",
-  "Sour",
-  "Dark",
-  "Lable",
-  "Herb/Spice/Fruit",
-  "Hoppy",
+  {
+    id: "ale",
+    name: "Ale",
+  },
+  {
+    id: "lager",
+    name: "Lager",
+  },
+  {
+    id: "ipa",
+    name: "Ipa",
+  },
+  {
+    id: "sour",
+    name: "Sour",
+  },
+  {
+    id: "dark",
+    name: "Dark",
+  },
+  {
+    id: "lable",
+    name: "Lable",
+  },
+  {
+    id: "herb-spice-fruit",
+    name: "Herb/Spice/Fruit",
+  },
+  {
+    id: "hoppy",
+    name: "Hoppy",
+  },
+];
+
+export const ALCOHOL = [
+  {
+    id: "zero-five",
+    name: "0% - 5%",
+  },
+  {
+    id: "five-seven",
+    name: "5% - 7%",
+  },
+  {
+    id: "over-seven",
+    name: "Over 7%",
+  },
+];
+export const COLOR = [
+  {
+    id: "to-fifteen-ebc",
+    name: "To 15 EBC",
+  },
+  {
+    id: "fifteen-fourty-ebc",
+    name: "15 - 40 EBC",
+  },
+  {
+    id: "over-fourty-ebc",
+    name: "Over 40 EBC",
+  },
+];
+export const QUANTITY = [
+  {
+    id: "four",
+    name: 4,
+  },
+  {
+    id: "six",
+    name: 6,
+  },
 ];
