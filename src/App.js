@@ -1,5 +1,5 @@
 import Header from "./components/header/Header.js";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import { MENU_LIST } from "./components/constants.js";
 import { FOOTER_MENU_LIST } from "./components/constants.js";
 import Footer from "./components/footer/Footer.js";
@@ -9,7 +9,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <Routes>
           {MENU_LIST.map((item) => {
@@ -29,7 +29,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
