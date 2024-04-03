@@ -13,7 +13,7 @@ function App() {
         <Header />
         <Routes>
           {MENU_LIST.map((item) => {
-            return <Route exact path={item.link} element={item.element} />;
+            return <Route exact path={`PET-project-frontend-React/${item.link}`} element={item.element} />;
           })}
           {FOOTER_MENU_LIST.map((item) => {
             return item.list.map((subelement) => {
