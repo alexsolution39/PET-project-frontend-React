@@ -7,10 +7,10 @@ import Shop from "./pages/Shop.js";
 
 // ======================= Menu header =======================
 export const MENU_LIST = [
-  { name: "HOME", link: "/PET-project-frontend-React/", element: <Home /> },
+  { name: "HOME", link: "/", element: <Home /> },
   {
     name: "SHOP",
-    link: "/PET-project-frontend-React/shop",
+    link: "/shop",
     element: <Shop activeKey="ALL" filterButton={"none"} />,
   },
   { name: "ABOUT", link: "", element: <Shop /> },
