@@ -5,7 +5,7 @@ import "./KabinetLounge.css";
 const KabinetLounge = () => {
   return (
     <section class="trip-to-kabinet-lounge">
-      <img src="./pics/trip-to-kabinet-lounge.png" alt="" />
+      <img src="pics/trip-to-kabinet-lounge.png" alt="" />
       <div class="kabinet-lounge-title">
         <div class="kabinet-lounge-title-h2">
           <h2>

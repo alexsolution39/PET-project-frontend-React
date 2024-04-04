@@ -54,7 +54,7 @@ const NextCategory = () => {
   };
   return (
     <section className="next-shop-category" onClick={changeCategory}>
-      <img src="../pics/Beers.png" alt="" />
+      <img src="pics/Beers.png" alt="" />
       <div className="next-shop-category-title">
         <button className="next-shop-category-button">
           {nextCategoryButtonTitle}

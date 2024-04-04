@@ -12,7 +12,7 @@ function LinkToAboutUs() {
           GREAT EXCITEMENT
         </h2>
       </div>
-      <img src="../pics/link-to-about-us-main-page.png" alt="" />
+      <img src="pics/link-to-about-us-main-page.png" alt="" />
       <div class="align-right">
         <p>
           We are searching for new and unusual tastes, while aiming to offer the
