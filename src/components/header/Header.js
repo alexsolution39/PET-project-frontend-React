@@ -7,7 +7,7 @@ function Header() {
       <section className="menu">
         <div className="logo">
           <a href="/">
-            <img src="logo.png" alt="" />
+            <img src="pics/logo.png" alt="" />
           </a>
         </div>
         <div className="menu-list">
