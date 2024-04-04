@@ -1,4 +1,4 @@
-# ![preview](./pics/preview.png)
+# ![preview](/public/pics/preview.png)
 ![Static Badge](https://img.shields.io/badge/JS-yellow)
 ![Static Badge](https://img.shields.io/badge/CSS-purple)
 ![Static Badge](https://img.shields.io/badge/HTML-red)
