@@ -13,10 +13,10 @@ export const MENU_LIST = [
     link: "/PET-project-frontend-React/shop",
     element: <Shop activeKey="ALL" filterButton={"none"} />,
   },
-  { name: "ABOUT", link: "", element: <Shop /> },
-  { name: "ART", link: "", element: <Shop /> },
-  { name: "NEWS", link: "", element: <Shop /> },
-  { name: "CONTACT", link: "", element: <Shop /> },
+  { name: "ABOUT", link: "/PET-project-frontend-React", element: "" },
+  { name: "ART", link: "/PET-project-frontend-React", element: "" },
+  { name: "NEWS", link: "/PET-project-frontend-React", element: "" },
+  { name: "CONTACT", link: "/PET-project-frontend-React", element: "" },
 ];
 // ======================= Index page =======================
 export const BESTSELLERS_LIST = [
