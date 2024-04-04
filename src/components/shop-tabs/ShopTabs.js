@@ -56,35 +56,35 @@ const ShopTabs = ({ activeKey, filterButton }) => {
               <Nav.Link
                 className="normal-button tab-button"
                 eventKey="ALL"
-                href="/shop"
+                href="https://formulujmario.github.io/PET-project-frontend-React/shop"
               >
                 ALL
               </Nav.Link>
               <Nav.Link
                 className="normal-button tab-button"
                 eventKey="BEER-PACKS"
-                href="/shop-beer-packs"
+                href="https://formulujmario.github.io/PET-project-frontend-React/shop-beer-packs"
               >
                 BEER PACKS
               </Nav.Link>
               <Nav.Link
                 className="normal-button tab-button"
                 eventKey="BEERS"
-                href="/shop-beers"
+                href="https://formulujmario.github.io/PET-project-frontend-React/shop-beers"
               >
                 BEERS
               </Nav.Link>
               <Nav.Link
                 className="normal-button tab-button"
                 eventKey="PIVOLADA"
-                href="/shop-pivolada"
+                href="https://formulujmario.github.io/PET-project-frontend-React/shop-pivolada"
               >
                 PIVOLADA
               </Nav.Link>
               <Nav.Link
                 className="normal-button tab-button"
                 eventKey="MERCH"
-                href="/shop-merch"
+                href="https://formulujmario.github.io/PET-project-frontend-React/shop-merch"
               >
                 MERCH
               </Nav.Link>
