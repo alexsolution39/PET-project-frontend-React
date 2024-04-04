@@ -15,7 +15,7 @@ const MainLinks = () => {
                 {element.list.map((subelement) => {
                   return (
                     <li>
-                      <Anchor href={subelement.link}>{subelement.name}</Anchor>
+                      <Anchor href={`/PET-project-frontend-React${subelement.link}`}>{subelement.name}</Anchor>
                     </li>
                   );
                 })}
