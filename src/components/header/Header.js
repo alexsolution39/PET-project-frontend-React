@@ -7,7 +7,7 @@ function Header() {
       <section className="menu">
         <div className="logo">
           <a href="/">
-            <img src="../PET-project-frontend-React/pics/logo.png" alt="" />
+            <img src="logo.png" alt="" />
           </a>
         </div>
         <div className="menu-list">
