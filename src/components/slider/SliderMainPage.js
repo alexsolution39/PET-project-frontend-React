@@ -19,13 +19,13 @@ const SliderMainPage = () => {
             loop="true"
           >
             <swiper-slide>
-              <img src="../pics/slider.png" alt="" />
+              <img src="pics/slider.png" alt="" />
             </swiper-slide>
             <swiper-slide>
-              <img src="../pics/slider.png" alt="" />
+              <img src="pics/slider.png" alt="" />
             </swiper-slide>
             <swiper-slide>
-              <img src="../pics/slider.png" alt="" />
+              <img src="pics/slider.png" alt="" />
             </swiper-slide>
           </swiper-container>
         </div>
