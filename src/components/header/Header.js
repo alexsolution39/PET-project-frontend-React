@@ -1,3 +1,4 @@
+import { memo } from "react";
 import HeaderMenu from "./HeaderMenu";
 import "./Header.css";
 
@@ -28,4 +29,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default memo(Header);

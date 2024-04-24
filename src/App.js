@@ -9,8 +9,8 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      <Header />
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Header />
         <Routes>
           {MENU_LIST.map((item) => {
             return <Route path={item.link} element={item.element} />;
@@ -19,7 +19,6 @@ function App() {
             return item.list.map((subelement) => {
               return (
                 <Route
-                  exact
                   path={subelement.link}
                   element={subelement.element}
                 />
@@ -28,8 +27,8 @@ function App() {
           })}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }

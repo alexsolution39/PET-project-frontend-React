@@ -1,3 +1,4 @@
+import { memo } from "react";
 import BackToTop from "../buttons/BackToTop.js";
 import Subscribe from "./subscribe/Subscribe.js";
 import MainLinks from "./main-links/MainLinks.js";
@@ -18,4 +19,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);
