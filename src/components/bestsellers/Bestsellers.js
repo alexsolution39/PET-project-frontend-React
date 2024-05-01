@@ -20,7 +20,11 @@ const Bestsellers = () => {
     <section className="bestsellers">
       <div className="section-title">
         <h2>BESTSELLERS</h2>
-        <NormalWhiteButton text="SEE ALL" icon={<BsArrowUpRight />} />
+        <NormalWhiteButton
+          text="SEE ALL"
+          icon={<BsArrowUpRight />}
+          href="/shop"
+        />
       </div>
       <ProductsSlider list={bestsellers} sliderParams={sliderParams} />
     </section>

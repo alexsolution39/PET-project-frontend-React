@@ -1,17 +1,21 @@
 import { useRef } from "react";
+import { Anchor } from "react-bootstrap";
 import "./ProductsSlider.css";
 
 const product = (element) => {
+  let myLink = element.path;
   return (
     <swiper-slide>
-      <div className="swiper-slide-item">
-        <img src={element.img} alt="" />
-        <div className="swiper-slide-item-title">
-          <h4>{element.name}</h4>
-          <h4>{element.price}</h4>
+      <Anchor href={`/${myLink}`}>
+        <div className="swiper-slide-item">
+          <img src={element.img} alt="" />
+          <div className="swiper-slide-item-title">
+            <h4>{element.name}</h4>
+            <h4>{element.price}</h4>
+          </div>
+          <p>{element.description}</p>
         </div>
-        <p>{element.description}</p>
-      </div>
+      </Anchor>
     </swiper-slide>
   );
 };
@@ -19,12 +23,14 @@ const product = (element) => {
 const shopNow = (element) => {
   return (
     <swiper-slide>
-      <div className="swiper-slide-item-shop-now">
-        <div className="swiper-slide-item-shop-now-img">
-          <img src={element.img} alt=""></img>
+      <Anchor href="/shop">
+        <div className="swiper-slide-item-shop-now">
+          <div className="swiper-slide-item-shop-now-img">
+            <img src={element.img} alt=""></img>
+          </div>
+          <span className="shop-now">{element.name}</span>
         </div>
-        <span className="shop-now">{element.name}</span>
-      </div>
+      </Anchor>
     </swiper-slide>
   );
 };

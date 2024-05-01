@@ -10,7 +10,7 @@ const Footer = () => {
       <BackToTop />
       <section className="footer-main">
         <Subscribe />
-        <MainLinks/>
+        <MainLinks />
         <section className="developed-by">
           <span>© 2022 kabinet brewery</span>
         </section>

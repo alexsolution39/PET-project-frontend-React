@@ -19,13 +19,19 @@ const SliderMainPage = () => {
             loop="true"
           >
             <swiper-slide>
-              <img src="pics/slider.png" alt="" />
+              <a href="/shop-beers/plavo">
+                <img src="pics/slider.png" alt="" />
+              </a>
             </swiper-slide>
             <swiper-slide>
-              <img src="pics/slider.png" alt="" />
+              <a href="/shop-beers/plavo">
+                <img src="pics/slider.png" alt="" />
+              </a>
             </swiper-slide>
             <swiper-slide>
-              <img src="pics/slider.png" alt="" />
+              <a href="/shop-beers/plavo">
+                <img src="pics/slider.png" alt="" />
+              </a>
             </swiper-slide>
           </swiper-container>
         </div>
