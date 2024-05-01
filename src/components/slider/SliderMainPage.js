@@ -19,17 +19,17 @@ const SliderMainPage = () => {
             loop="true"
           >
             <swiper-slide>
-              <a href="/shop-beers/plavo">
+              <a href="/PET-project-frontend-React/shop-beers/plavo">
                 <img src="pics/slider.png" alt="" />
               </a>
             </swiper-slide>
             <swiper-slide>
-              <a href="/shop-beers/plavo">
+              <a href="/PET-project-frontend-React/shop-beers/plavo">
                 <img src="pics/slider.png" alt="" />
               </a>
             </swiper-slide>
             <swiper-slide>
-              <a href="/shop-beers/plavo">
+              <a href="/PET-project-frontend-React/shop-beers/plavo">
                 <img src="pics/slider.png" alt="" />
               </a>
             </swiper-slide>

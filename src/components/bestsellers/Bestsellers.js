@@ -23,7 +23,7 @@ const Bestsellers = () => {
         <NormalWhiteButton
           text="SEE ALL"
           icon={<BsArrowUpRight />}
-          href="/shop"
+          href="/PET-project-frontend-React/shop"
         />
       </div>
       <ProductsSlider list={bestsellers} sliderParams={sliderParams} />

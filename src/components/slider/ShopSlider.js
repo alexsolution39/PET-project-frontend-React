@@ -29,13 +29,13 @@ const ShopSlider = ({ list, sliderParams, title }) => {
             <div class="shop-category">
               {list.map((element) => {
                 if (list === SHOP_MAIN_BEERS_LIST) {
-                  shopPath = "shop-beers/";
+                  shopPath = "PET-project-frontend-React/shop-beers/";
                 } else if (list === SHOP_MAIN_BEER_PACKS_LIST) {
-                  shopPath = "shop-beer-packs/";
+                  shopPath = "PET-project-frontend-React/shop-beer-packs/";
                 } else if (list === SHOP_MAIN_MERCH_LIST) {
-                  shopPath = "shop-merch/";
+                  shopPath = "PET-project-frontend-React/shop-merch/";
                 } else {
-                  shopPath = "shop-pivolada/";
+                  shopPath = "PET-project-frontend-React/shop-pivolada/";
                 }
                 let myLink =
                   shopPath +
